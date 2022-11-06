@@ -13,6 +13,9 @@ const NavigationBar = () => {
           <Link className="nav-link" to="/transactions">
             Transactions
           </Link>
+          <Link className="nav-link" to="/transfer">
+            Transfer
+          </Link>
           <Link className="nav-link" to="/addresses">
             Addresses
           </Link>

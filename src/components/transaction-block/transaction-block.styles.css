@@ -1,0 +1,15 @@
+.transaction-container {
+    border: 1px solid black;
+    display: inline-block;
+    margin: 10px;
+    text-align: left; /* Resetting the text alignment */
+    vertical-align: top; /* Making sure inline-block element align to the top */
+    /* Inline-block fix for IE7 and below */
+    zoom: 1;
+    *display: inline;
+}
+
+.transaction-container p {
+padding: 0.5em 0.5em
+}
+
