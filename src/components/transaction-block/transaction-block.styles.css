@@ -2,9 +2,8 @@
     border: 1px solid black;
     display: inline-block;
     margin: 10px;
-    text-align: left; /* Resetting the text alignment */
-    vertical-align: top; /* Making sure inline-block element align to the top */
-    /* Inline-block fix for IE7 and below */
+    text-align: left; 
+    vertical-align: top; 
     zoom: 1;
     *display: inline;
 }

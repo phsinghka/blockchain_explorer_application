@@ -13,7 +13,7 @@ function App() {
       <Routes>
         <Route path="/" element={<NavigationBar />}>
           <Route path="/transactions" element={<Transaction />} />
-          <Route path="/transfer" element={<Transfer />} />
+          <Route path="/addresses/:addressHash" element={<Transfer />} />
           <Route path="/addresses" element={<Addresses />} />
           <Route path="/wallet" element={<Wallet />} />
         </Route>
