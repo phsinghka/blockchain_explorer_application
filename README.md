@@ -9,7 +9,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 This project was created by : \
 Piyush Himmatsinghka : 101354659 \
-Yash Patel : \
+Yash Patel : 101395264\
 \
 \
 ![Project Demo Video](src/assets/video_project.gif)
