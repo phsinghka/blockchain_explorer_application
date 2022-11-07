@@ -12,4 +12,4 @@ Piyush Himmatsinghka : 101354659 \
 Yash Patel : \
 \
 \
-![Project Demo Video](../blockchain_explorer_application/src/assets/video_project.gif)
+![Project Demo Video](src/assets/video_project.gif)
