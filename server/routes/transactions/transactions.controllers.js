@@ -2,7 +2,7 @@ const Transaction = require('../../models/transaction.model');
 
 const getHistory = async (req, res) => {
   try {
-    const transaction = await Transaction.find({}, { _id: 0, __v: 0 });
+    const transaction = await Transaction.find({}, { __v: 0 });
     res.status(200).json(transaction);
   } catch (error) {
     throw new Error('No Transaction Found');

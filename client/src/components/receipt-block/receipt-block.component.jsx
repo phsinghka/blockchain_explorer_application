@@ -1,30 +1,23 @@
-import React, { useState, useEffect } from "react";
+import React from 'react';
+import moment from 'moment';
 
 const ReceiptBlock = ({ receiptData }) => {
-  const newReceiptData = {
-    txHash: "",
-    blockHash: "",
-    blockNumber: "",
-    from: "",
-    to: "",
-    gasUsed: "",
-  };
   return (
-    <div className="transaction-container">
+    <div className='transaction-container'>
       <p>
         <b>Transaction Hash:</b> {receiptData.txHash}
       </p>
       <p>
-        <b>Block Hash:</b> {receiptData.blockHash}
+        <b>Status:</b> {receiptData.status}
       </p>
       <p>
-        <b>Block Number:</b> {receiptData.blockNumber}
+        <b>Timestamp:</b> {moment(receiptData.timestamp).format('lll')}
       </p>
       <p>
-        <b>From:</b> {receiptData.from}
+        <b>From:</b> {receiptData.sender}
       </p>
       <p>
-        <b>To:</b> {receiptData.to}
+        <b>To:</b> {receiptData.receiver}
       </p>
       <p>
         <b>Amount :</b> {receiptData.amount}

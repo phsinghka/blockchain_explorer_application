@@ -5,6 +5,6 @@ const { getHistory, createTransaction } = require('./transactions.controllers');
 const transactionRouter = express.Router();
 
 transactionRouter.get('/history', getHistory);
-transactionRouter.post('/trasfer', createTransaction);
+transactionRouter.post('/transfer', createTransaction);
 
 module.exports = transactionRouter;

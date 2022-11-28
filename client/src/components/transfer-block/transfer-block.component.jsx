@@ -1,23 +1,30 @@
-import React, { useState, useEffect } from "react";
-import ReceiptBlock from "../receipt-block/receipt-block.component";
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import ReceiptBlock from '../receipt-block/receipt-block.component';
 
 const TransferBlock = ({ transferData }) => {
-  const [amountValue, setAmountValue] = useState("");
+  const [amountValue, setAmountValue] = useState('');
   const [receiptData, setReceiptData] = useState(null);
   const { from, to } = transferData;
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
+
     const newReceiptData = {
       txHash:
-        "0x2767aabb9215f11f8ddc25cb0d43355632b8fe0f3a878cc5bda58763b739b6f5",
-      blockHash: "0x506f776572656420627920626c6f58726f757465",
-      blockNumber: "10",
-      from: from,
-      to: to,
+        '0x2767aabb9215f11f8ddc25cb0d43355632b8fe0f3a878cc5bda58763b739b6f5',
+      status: 'SUCCESS',
+      timestamp: new Date(),
+      sender: from,
+      receiver: to,
       amount: amountValue,
-      gasUsed: "21000",
+      gasUsed: '21000',
     };
+    const response = await axios.post(
+      'http://localhost:8000/transaction/transfer',
+      newReceiptData
+    );
+    console.log(response);
     setReceiptData(newReceiptData);
   };
 
@@ -27,7 +34,7 @@ const TransferBlock = ({ transferData }) => {
 
   return (
     <div>
-      <div className="transaction-container">
+      <div className='transaction-container'>
         <p>
           <b>From: </b>
           {from}
@@ -42,14 +49,14 @@ const TransferBlock = ({ transferData }) => {
           </label>
           <input
             required
-            type="number"
-            name="amount"
+            type='number'
+            name='amount'
             value={amountValue}
             onChange={handleChange}
           />
           <br></br>
           <br></br>
-          <button type="submit" className="btn btn-info">
+          <button type='submit' className='btn btn-info'>
             Transfer
           </button>
         </form>

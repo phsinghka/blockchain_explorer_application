@@ -3,7 +3,7 @@ const Transaction = require('../../models/transaction.model');
 
 const getAddresses = async (req, res) => {
   const allAddresses = await Address.find({}, { _id: 0, __v: 0 });
-  res.status(200).json({ allAddresses });
+  res.status(200).json(allAddresses);
 };
 
 const getBalance = async (req, res) => {
@@ -33,10 +33,8 @@ const getBalance = async (req, res) => {
 
   const newBalance = plusSum - minusSum;
   return res.status(200).json({
-    account: {
-      address: whichAddress,
-      balance: newBalance,
-    },
+    address: whichAddress,
+    balance: newBalance,
   });
 };
 

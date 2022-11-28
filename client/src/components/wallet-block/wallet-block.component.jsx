@@ -1,11 +1,11 @@
-const WalletBlock = () => {
+const WalletBlock = ({ accountData }) => {
   return (
     <div>
       <p>
-        <b>Address: 0xf2f5c73fa04406b1995e397b55c24ab1f3ea726c</b>
+        <b>Address: {accountData.address}</b>
       </p>
       <p>
-        <b>Balance: 999.99345299 ETH</b>
+        <b>Balance: {accountData.balance} ETH</b>
       </p>
     </div>
   );
