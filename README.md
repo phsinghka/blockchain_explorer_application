@@ -13,10 +13,11 @@ The Server Runs on http://localhost:8000
 
 ### 2. In the Client directory, you can run:
 ```
+> cd client
 > npm install
 > npm start
 
-The Server Runs on http://localhost:3000
+The Client Runs on http://localhost:3000
 ```
 
 \
