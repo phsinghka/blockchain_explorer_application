@@ -11,7 +11,16 @@
 The Server Runs on http://localhost:8000
 ```
 
-### 2. In the Client directory, you can run:
+### 2. In the Smart Contract directory, you can run:
+```
+> cd smart_contract
+> npm install hardhat
+> npx hardhat node
+
+The Node on Hardhat runs on http://127.0.0.1:8545/
+```
+
+### 3. In the Client directory, you can run:
 ```
 > cd client
 > npm install

@@ -7,7 +7,7 @@ const Transfer = () => {
   const [address, setAddress] = useState(0);
   const fetchAccountData = async () => {
     const { data } = await axios.get(
-      'http://localhost:8000/account/balance/Ox71bE63f3384f5fb98995898A86B02Fb2426c5788'
+      'http://localhost:8000/account/balance/0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266'
     );
     setAddress(data.address);
   };
